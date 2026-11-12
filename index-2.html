@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102a43">
+  <title>Profil Kelas 7E — Abu Bakar</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1d4ed8;
+      --gold: #f4c95d;
+      --ink: #172b4d;
+      --muted: #64748b;
+      --paper: #f4f7fb;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--paper); color: var(--ink);
+    }
+    a { color: inherit; }
+    header {
+      color: white; padding: 24px max(22px, calc((100% - 1120px)/2)) 76px;
+      background: linear-gradient(130deg, #102a43, #174b75 65%, #2563a6);
+      position: relative; overflow: hidden;
+    }
+    header::after {
+      content: "7E"; position: absolute; right: 7%; top: -62px;
+      font-size: clamp(170px, 28vw, 290px); line-height: 1;
+      font-weight: 950; color: #ffffff0d; pointer-events: none;
+    }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; position:relative; z-index:1; }
+    .brand { font-weight:900; letter-spacing:.1em; font-size:14px; }
+    .navlinks { display:flex; gap:22px; }
+    .navlinks a { color:#e6eff8; text-decoration:none; font-size:14px; }
+    .navlinks a:hover { color:var(--gold); }
+    .hero { max-width:760px; padding-top:65px; position:relative; z-index:1; }
+    .eyebrow { color:var(--gold); font-size:12px; font-weight:850; letter-spacing:.18em; }
+    h1 { margin:14px 0; font-size:clamp(44px, 8vw, 78px); line-height:.98; letter-spacing:-.055em; }
+    .hero p { color:#dbe8f5; font-size:17px; line-height:1.7; max-width:600px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:25px; }
+    .btn { border:0; border-radius:999px; padding:12px 19px; font-weight:800; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; }
+    .btn-gold { background:var(--gold); color:var(--navy); }
+    .btn-glass { color:white; border:1px solid #ffffff70; background:#ffffff12; }
+    main { max-width:1120px; margin:-35px auto 0; padding:0 22px 70px; position:relative; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .stat { background:white; border:1px solid #e5ebf3; border-radius:18px; padding:20px 22px; box-shadow:0 12px 35px #102a4310; }
+    .stat strong { display:block; color:var(--blue); font-size:30px; }
+    .stat span { color:var(--muted); font-size:13px; }
+    section { padding-top:62px; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:22px; }
+    .kicker { color:var(--blue); font-weight:850; letter-spacing:.14em; font-size:11px; }
+    h2 { margin:7px 0 0; font-size:clamp(27px,4vw,38px); letter-spacing:-.04em; }
+    .section-desc { color:var(--muted); line-height:1.6; margin:8px 0 0; }
+    .tools { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0; }
+    input[type="search"] {
+      flex:1; min-width:220px; border:1px solid #d8e1ec; border-radius:12px;
+      padding:13px 15px; font:inherit; outline:none; background:white;
+    }
+    input[type="search"]:focus { border-color:var(--blue); box-shadow:0 0 0 3px #1d4ed822; }
+    .small-btn { border:1px solid #d8e1ec; border-radius:12px; background:white; color:var(--ink); padding:12px 15px; font-weight:750; cursor:pointer; }
+    .small-btn:hover { border-color:var(--blue); color:var(--blue); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+    .student {
+      background:white; border:1px solid #e4eaf2; border-radius:17px; padding:17px;
+      display:flex; align-items:center; gap:14px; transition:.2s;
+    }
+    .student:hover { transform:translateY(-3px); box-shadow:0 12px 28px #102a4310; }
+    .avatar {
+      width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; overflow:hidden;
+      border-radius:16px; background:#eaf1ff; color:#1d4ed8; font-weight:900; font-size:17px;
+      border:0; padding:0; cursor:pointer; position:relative;
+    }
+    .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+    .avatar:hover { box-shadow:0 0 0 3px #1d4ed833; }
+    .student h3 { margin:0 0 4px; font-size:15px; }
+    .student p { margin:0; color:var(--muted); font-size:12px; }
+    .avatar-wrap { position:relative; flex:0 0 56px; width:56px; height:56px; }
+    .avatar-wrap .avatar { width:56px; height:56px; }
+    .avatar::after {
+      content:"📷"; position:absolute; inset:0; display:grid; place-items:center;
+      background:#102a4399; font-size:18px; opacity:0; transition:.2s;
+    }
+    .avatar:hover::after, .avatar:focus-visible::after { opacity:1; }
+    .info { min-width:0; }
+    .actions { margin-left:auto; display:flex; gap:4px; }
+    .icon-btn { width:34px; height:34px; border:0; border-radius:10px; background:transparent; color:#7b8ba0; cursor:pointer; font-size:17px; display:grid; place-items:center; padding:0; }
+    .icon-btn:hover { background:#eaf1ff; color:var(--blue); }
+    .icon-btn.rm:hover { background:#fee2e2; color:#dc2626; }
+    .teacher { border-color:#f1dfa6; background:linear-gradient(135deg,#fffdf4,#fff); margin-bottom:18px; padding:22px; gap:18px; }
+    .teacher .avatar-wrap, .teacher .avatar-wrap .avatar { width:76px; height:76px; flex-basis:76px; border-radius:20px; }
+    .teacher .avatar { background:#fff3cd; color:#8a6500; font-size:22px; }
+    .teacher .role { display:inline-block; font-size:11px; font-weight:850; letter-spacing:.14em; color:#8a6500; background:#fff3cd; padding:4px 10px; border-radius:999px; margin-bottom:8px; }
+    .teacher h3 { font-size:19px; margin:0 0 4px; }
+    .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:var(--navy); color:white; padding:11px 18px; border-radius:999px; font-size:13px; font-weight:700; opacity:0; pointer-events:none; transition:.25s; z-index:50; }
+    .toast.show { opacity:1; }
+    .empty { display:none; padding:25px; text-align:center; color:var(--muted); background:white; border-radius:15px; }
+    .about { display:grid; grid-template-columns:1.2fr .8fr; gap:18px; }
+    .panel { background:white; border:1px solid #e4eaf2; border-radius:20px; padding:25px; }
+    .panel h3 { margin:0 0 10px; font-size:20px; }
+    .panel p { color:var(--muted); line-height:1.75; margin:0; }
+    .quote { background:var(--navy); color:white; }
+    .quote p { color:#dbe8f5; font-size:19px; font-weight:650; }
+    .quote small { display:block; margin-top:17px; color:var(--gold); font-weight:800; letter-spacing:.08em; }
+    footer { background:#0b2034; color:#c5d3e2; text-align:center; padding:28px 20px; font-size:13px; }
+    footer strong { color:white; }
+    @media (max-width:760px) {
+      .navlinks { gap:12px; } .navlinks a { font-size:12px; }
+      .grid { grid-template-columns:repeat(2,1fr); }
+      .about { grid-template-columns:1fr; }
+    }
+    @media (max-width:520px) {
+      header { padding-bottom:65px; } .navlinks { display:none; }
+      .stats { gap:8px; } .stat { padding:15px 12px; }
+      .stat strong { font-size:24px; } .stat span { font-size:11px; }
+      .grid { grid-template-columns:1fr; } .section-head { align-items:start; flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <header id="beranda">
+    <nav>
+      <div class="brand">KELAS 7E</div>
+      <div class="navlinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#anggota">Anggota</a>
+        <a href="#tentang">Tentang Kelas</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="eyebrow">SMPIT ABU BAKAR YOGYAKARTA</div>
+      <h1>Satu Kelas.<br>Satu Cerita.</h1>
+      <p>Selamat datang di halaman profil Kelas 7E. Tempat menyimpan cerita, semangat, dan kebersamaan 30 siswa dalam satu keluarga kelas.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#anggota">Lihat Anggota Kelas</a>
+        <a class="btn btn-glass" href="#tentang">Kenali Kelas Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="stats">
+      <div class="stat"><strong>30</strong><span>Anggota kelas</span></div>
+      <div class="stat"><strong>7E</strong><span>Kelas</span></div>
+      <div class="stat"><strong>2026/2027</strong><span>Tahun ajaran</span></div>
+    </div>
+
+    <section id="anggota">
+      <div class="section-head">
+        <div>
+          <div class="kicker">KELUARGA 7E</div>
+          <h2>Anggota Kelas</h2>
+          <p class="section-desc">Kenali 30 siswa yang menjadi bagian dari cerita kelas kami.</p>
+        </div>
+      </div>
+      <div id="teacherCard"></div>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Cari nama siswa..." aria-label="Cari nama siswa">
+        <button class="small-btn" id="clearPhotos">Hapus semua foto</button>
+      </div>
+      <div class="grid" id="studentGrid"></div>
+      <input type="file" id="photoInput" accept="image/*" hidden>
+      <div class="empty" id="empty">Nama yang kamu cari belum ditemukan.</div>
+    </section>
+
+    <section id="tentang">
+      <div class="section-head">
+        <div>
+          <div class="kicker">TENTANG KAMI</div>
+          <h2>Lebih dari Sekadar Kelas</h2>
+        </div>
+      </div>
+      <div class="about">
+        <div class="panel">
+          <h3>Kelas 7E Abu Bakar</h3>
+          <p>Kami adalah bagian dari keluarga besar SMPIT Abu Bakar Yogyakarta. Dengan semangat belajar, saling menghargai, dan bekerja sama, kami ingin menjadikan setiap hari di sekolah sebagai pengalaman yang bermakna.</p>
+        </div>
+        <div class="panel quote">
+          <p>“Bersama kita belajar, bersama kita bertumbuh, dan bersama kita meraih prestasi.”</p>
+          <small>— KELUARGA 7E</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>KELAS 7E — SMPIT ABU BAKAR YOGYAKARTA</strong><br>
+    Dibuat dengan semangat kebersamaan · Tahun Ajaran 2026/2027
+  </footer>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Daftar nama siswa sesuai urutan absen (nama tidak bisa diubah).
+    const students = [
+      "AARON ARSA ARSENIO",
+      "ADAM MARTONEGORO AL RIZTHO",
+      "AHYAINA JESSADA AHMAD",
+      "AIMAN AAKIF FERDIAN",
+      "AISY RAAKAAN BRAHMA",
+      "ARKANAKA IZYAN NALENDRA",
+      "ARKHAN ALFAREZKY",
+      "ARRASYA ARVIN WIBIYANTO",
+      "ATHALLAH MUHAMMAD MULYA",
+      "DIO HAFIZKA ALZAIN",
+      "DZEKA ADZANA RAHADIAN",
+      "ELGHIFIARY QIANDRA MALIK ACHDALI",
+      "FATIH RIZKY RAMASELA",
+      "FERGIE AL HAFIDZ ARIANPUTRA",
+      "GATTAN MAULANA",
+      "HANIF RASYAD AL KHALIFI",
+      "IRHAM ZIDNI ABDURAHMAN",
+      "MUHAMMAD BAYYIN NIBRAZ ZAIN",
+      "MUHAMMAD BHISMA FATKHAN MUBINA",
+      "MUHAMMAD FARROZIBRAN MALISI",
+      "MUHAMMAD NOUVAL AIKO HARDITYA",
+      "MUHAMMAD RAFIF ABDILLAH",
+      "MUHAMMAD ZEIN PUTRA NUGRAHA",
+      "NAFIIS AINURROHMAN HABIBI",
+      "NARAYA ZAKY ALFAREZI",
+      "NARENDRA FARZANA GUNAWAN",
+      "NUR IZZAT AL-FAUZAN",
+      "RAFIIF KESUMA GANAFATIH",
+      "ZAHID ABDULLOH",
+      "ZHAAFIR ABDURRAHMAN SIREGAR"
+    ];
+
+    const STORAGE_KEY = "kelas7e_photos_v1";
+    let photos = {};
+    try { photos = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { photos = {}; }
+
+    const grid = document.getElementById("studentGrid");
+    const search = document.getElementById("search");
+    const empty = document.getElementById("empty");
+    const photoInput = document.getElementById("photoInput");
+    const toastEl = document.getElementById("toast");
+    let currentKey = null;
+
+    function toast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(toast.t);
+      toast.t = setTimeout(() => toastEl.classList.remove("show"), 2400);
+    }
+
+    function savePhotos() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(photos)); return true; }
+      catch (e) { toast("Penyimpanan penuh, foto tidak tersimpan permanen."); return false; }
+    }
+
+    function initials(name) {
+      return name.split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join("").toUpperCase() || "?";
+    }
+
+    function escapeHTML(value) {
+      return value.replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      }[char]));
+    }
+
+    const TEACHER = "TRI ANGGORO ADHI";
+
+    function cardHTML(key, name, subtitle, extra) {
+      const photo = photos[key];
+      const safe = escapeHTML(name);
+      const label = photo ? "Ganti foto" : "Tambah foto";
+      return `
+        <article class="student ${extra || ""}">
+          <div class="avatar-wrap">
+            <button class="avatar pick" data-key="${key}" title="${label}" aria-label="${label} ${safe}">
+              ${photo ? `<img src="${photo}" alt="Foto ${safe}">` : initials(name)}
+            </button>
+          </div>
+          <div class="info">
+            ${extra ? '<span class="role">WALI KELAS</span>' : ""}
+            <h3>${safe}</h3>
+            <p>${subtitle}</p>
+          </div>
+          <div class="actions">
+            <button class="icon-btn pick" data-key="${key}" title="${label}" aria-label="${label} ${safe}">${photo ? "✎" : "📷"}</button>
+            ${photo ? `<button class="icon-btn rm" data-key="${key}" title="Hapus foto" aria-label="Hapus foto ${safe}">🗑</button>` : ""}
+          </div>
+        </article>`;
+    }
+
+    function render() {
+      document.getElementById("teacherCard").innerHTML =
+        cardHTML("wali", TEACHER, "Wali Kelas 7E · SMPIT Abu Bakar Yogyakarta", "teacher");
+
+      const query = search.value.trim().toLowerCase();
+      const visible = students.map((name, index) => ({ name, index }))
+        .filter(student => student.name.toLowerCase().includes(query));
+
+      grid.innerHTML = visible.map(({ name, index }) =>
+        cardHTML(String(index), name, `Siswa Kelas 7E · No. ${String(index + 1).padStart(2, "0")}`)
+      ).join("");
+
+      empty.style.display = visible.length ? "none" : "block";
+    }
+
+    // Perkecil & potong foto jadi persegi agar hemat penyimpanan.
+    function processImage(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onerror = reject;
+        reader.onload = () => {
+          const img = new Image();
+          img.onerror = reject;
+          img.onload = () => {
+            const size = 280;
+            const canvas = document.createElement("canvas");
+            canvas.width = canvas.height = size;
+            const side = Math.min(img.width, img.height);
+            const sx = (img.width - side) / 2, sy = (img.height - side) / 2;
+            canvas.getContext("2d").drawImage(img, sx, sy, side, side, 0, 0, size, size);
+            resolve(canvas.toDataURL("image/jpeg", 0.82));
+          };
+          img.src = reader.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function nameOf(key) { return key === "wali" ? TEACHER : students[Number(key)]; }
+
+    document.getElementById("anggota").addEventListener("click", event => {
+      const rm = event.target.closest(".rm");
+      if (rm) {
+        const key = rm.dataset.key;
+        if (confirm(`Hapus foto ${nameOf(key)}?`)) {
+          delete photos[key];
+          savePhotos();
+          render();
+        }
+        return;
+      }
+      const pick = event.target.closest(".pick");
+      if (!pick) return;
+      currentKey = pick.dataset.key;
+      photoInput.value = "";
+      photoInput.click();
+    });
+
+    photoInput.addEventListener("change", async () => {
+      const file = photoInput.files[0];
+      if (!file || currentKey === null) return;
+      if (!file.type.startsWith("image/")) { toast("File harus berupa gambar."); return; }
+      try {
+        photos[currentKey] = await processImage(file);
+        if (savePhotos()) toast("Foto berhasil disimpan ✓");
+        render();
+      } catch (e) {
+        toast("Gagal membaca gambar, coba file lain.");
+      }
+    });
+
+    document.getElementById("clearPhotos").addEventListener("click", () => {
+      if (!Object.keys(photos).length) { toast("Belum ada foto."); return; }
+      if (confirm("Hapus semua foto siswa?")) {
+        photos = {};
+        savePhotos();
+        render();
+      }
+    });
+
+    search.addEventListener("input", render);
+    render();
+  </script>
+</body>
+</html>
